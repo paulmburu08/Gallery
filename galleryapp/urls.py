@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    url('')
+    url('^gallery/', views.welcome, name = 'welcome')
 ]
 
 if settings.DEBUG:
