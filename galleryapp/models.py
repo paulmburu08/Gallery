@@ -4,5 +4,5 @@ from django.db import models
 class Location(models.Model):
     location = models.CharField(max_length=30)
 
-# class Category(models.Model):
-#     category =  
+class Category(models.Model):
+    category =  models.CharField(max_length=30)
