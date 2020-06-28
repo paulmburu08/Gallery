@@ -46,6 +46,9 @@ class Image(models.Model):
         self.delete()
 
     def update_image(self):
-        self.update()
+        self.objects.update()
+
+    def get_image_by_id(self,id):
+        self.filter
 
 
