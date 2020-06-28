@@ -13,8 +13,8 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
-    def update_location(self):
-        self.update()
+    # def update_location(self):
+    #     self.update()
 
 class Category(models.Model):
     category =  models.CharField(max_length=30)
@@ -45,10 +45,5 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
-    def update_image(self):
-        self.objects.update()
-
-    def get_image_by_id(self,id):
-        self.filter
 
 
