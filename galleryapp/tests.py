@@ -23,3 +23,11 @@ class TestLocation(TestCase):
         self.Ian.delete_location()
         location = Location.objects.all()
         self.assertTrue(len(location) == 0)
+
+    def test_update_method(self):
+        self.Ian.save_location()
+        self.Ian.update_location(location = 'Mombasa')
+        location = Location.objects.all()
+        self.assertEqual(location.location,'Mombasa')
+
+        
