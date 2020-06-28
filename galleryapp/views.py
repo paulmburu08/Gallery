@@ -6,4 +6,4 @@ from django.http import HttpResponse
 def landing_page(request):
     title = 'Photospace'
 
-    return render(request, 'base.html', {'title':title})
+    return render(request, 'index.html', {'title':title})
