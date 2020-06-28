@@ -16,3 +16,10 @@ class TestLocation(TestCase):
         self.Ian.save_location()
         location = Location.objects.all()
         self.assertTrue(len(location) > 0)
+
+    # Testing delete Method
+    def test_delete_method(self):
+        self.Ian.save_location()
+        self.Ian.delete_location()
+        location = Location.objects.all()
+        self.assertTrue(len(location) == 0)
