@@ -13,8 +13,9 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
-    # def update_location(self):
-    #     self.update()
+    @classmethod
+    def update_location(cls):
+        cls.update()
 
 class Category(models.Model):
     category =  models.CharField(max_length=30)
@@ -45,5 +46,9 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
+    @classmethod
+    def search_by_title(cls,search_term):
+        images = cls.objects.filter(category__icontains=search_term)
+        return images
 
 
