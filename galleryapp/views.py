@@ -27,20 +27,20 @@ def search_results(request):
 def image(request,id):
 
     try:
-        image = Image.get_image_by_id(id)
+        images = Image.get_image_by_id(id)
 
     except ObjectDoesNotExist:
         raise Http404()
 
-    return render(request, 'image.html',{'image':image})
+    return render(request, 'image.html',{'images':images})
 
 def location(request,location):
 
     try:
-        image = Image.filter_by_location(location)
+        images = Image.filter_by_location(location)
 
     except ObjectDoesNotExist:
         raise Http404()
 
-    return render(request, 'location.html',{'image':image})
+    return render(request, 'location.html',{'images':images})
 

@@ -1,7 +1,19 @@
 {%extends 'base.html'%} 
+{% load static %}
 
 {% block content %}
 
-
-
-{% endblock %}
+{% if images %}
+  <div class="row">
+    {% for image in images %}
+    <div class="card col-md-4" style="width: 18rem;">
+      <a href="{% url 'image' image.id %}">
+        <img src="{{image.image.url}}" class="card-img-top img-responsive" alt="Image">
+      </a> 
+      <div class="card-body">
+        <h4 class="card-text">{{image.name}}</h4>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}

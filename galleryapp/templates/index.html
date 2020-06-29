@@ -4,14 +4,18 @@
 {% block content %}
 
 {% if images %}
+  <div class="row">
     {% for image in images %}
-      <div class="col-sm-6 col-md-3">
-          <h1>{{image.name}}</h1>
-          <a href="{% url 'image' image.id %}">
-            <img src="{{image.image.url}}" class="img-responsive" alt="Image">
-          </a>  
+    <div class="card col-md-4" style="width: 18rem;">
+      <a href="{% url 'image' image.id %}">
+        <img src="{{image.image.url}}" class="card-img-top img-responsive" alt="Image">
+      </a> 
+      <div class="card-body">
+        <h4 class="card-text">{{image.name}}</h4>
       </div>
+    </div>
     {% endfor %}
+  </div>
   {% endif %}
 
 {% endblock %}
