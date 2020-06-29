@@ -1,13 +1,15 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,Http404
+from django.core.exceptions import ObjectDoesNotExist
 from . models import Image
 
 # Create your views here.
 
 def landing_page(request):
     title = 'Photospace'
+    images = Image.objects.all()
 
-    return render(request, 'index.html', {'title':title})
+    return render(request, 'index.html', {'title':title, 'images':images})
 
 def search_results(request):
 
@@ -21,3 +23,13 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'search.html',{"message":message})
+
+def image(request,id):
+
+    try:
+        image = Image.get_image_by_id(id)
+
+    except ObjectDoesNotExist:
+        raise Http404()
+
+    return render(request, 'image.html',{'image':image})

@@ -24,11 +24,5 @@ class TestLocation(TestCase):
         location = Location.objects.all()
         self.assertTrue(len(location) == 0)
 
-    def test_update_method(self):
-        self.Ian.save_location()
-        self.Ian.location = 'Mombasa'
-        self.Ian.update_location()
-        location = Location.objects.filter(location = 'Mombasa')
-        self.assertTrue(location.location == 'Mombasa')
 
 

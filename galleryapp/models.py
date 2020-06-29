@@ -13,10 +13,6 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
-    @classmethod
-    def update_location(cls):
-        cls.update()
-
 class Category(models.Model):
     category =  models.CharField(max_length=30)
 
@@ -48,7 +44,7 @@ class Image(models.Model):
 
     @classmethod
     def get_image_by_id(cls,id):
-        images = cls.objects.filter(id = id)
+        images = cls.objects.get(id = id)
         return images
 
     @classmethod
@@ -60,5 +56,6 @@ class Image(models.Model):
     def filter_by_location(cls, location):
         images = cls.objects.filter(location__location = location)
         return images
+
 
 
