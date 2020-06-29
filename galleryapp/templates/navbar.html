@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Photospace</a>
+    <a class="navbar-brand" href="/">Photospace</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,28 +7,28 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">UK</a>
+          <a class="nav-link" href="{% url 'location' 'UK' %}">UK</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">North America</a>
+            <a class="nav-link" href="{% url 'location' 'North America' %}">North America</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">South America</a>
+            <a class="nav-link" href="{% url 'location' 'South America' %}">South America</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Africa</a>
+            <a class="nav-link" href="{% url 'location' 'Africa' %}">Africa</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Australia</a>
+            <a class="nav-link" href="{% url 'location' 'Australia' %}">Australia</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Asia</a>
+            <a class="nav-link" href="{% url 'location' 'Asia' %}">Asia</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Antarctica</a>
+            <a class="nav-link" href="{% url 'location' 'Antarctica' %}">Antarctica</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Europe</a>
+            <a class="nav-link" href="{% url 'location' 'Europe' %}">Europe</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" action="{% url 'search_results' %}" >

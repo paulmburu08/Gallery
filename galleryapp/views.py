@@ -33,3 +33,14 @@ def image(request,id):
         raise Http404()
 
     return render(request, 'image.html',{'image':image})
+
+def location(request,location):
+
+    try:
+        image = Image.filter_by_location(location)
+
+    except ObjectDoesNotExist:
+        raise Http404()
+
+    return render(request, 'location.html',{'image':image})
+
