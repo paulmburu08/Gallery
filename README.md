@@ -5,9 +5,10 @@ A personal gallery application to display photos for others to see.
 {paulmburu08}https://github.com/paulmburu08
 
 # Live link
-
+https://paulgallery.herokuapp.com/
 
 # Description
+![Screenshot from 2020-06-30 23-52-33](https://user-images.githubusercontent.com/62005677/86175971-eac5ad00-bb2c-11ea-96ac-3e63ced4efd3.png)
 As a User you will be able to:
 * View different photos that interest him/her.
 * Click on a single photo to expand it and also view the details of the photo
