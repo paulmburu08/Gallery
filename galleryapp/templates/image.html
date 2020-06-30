@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{% block content %}
+<div class="container-fluid">
+<div class=" image">
+    <h3><b>{{ image.name }}</b></h3> 
+    <p><b>{{ image.location }}</b></p>
+      <img src="{{image.image.url}}" style="height: 400px;width: auto;" class="img img-responsive" alt="Image"> <br><br>
+    <p> {{ image.description }}</p>
+    <p>{{image.upload_date|date:"l d-F Y"}}</p>
+    
+</div>
+</div>
+
+
+{% endblock %}

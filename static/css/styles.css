@@ -48,8 +48,14 @@ hr{
     font-size: 30px;
 }
 
-.card-text{
+.image{
     font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+.img{
+    margin-left: 30px;
 }
 
 .search{
@@ -59,6 +65,4 @@ hr{
     margin-left: 15px;
 }
 
-.data-title{
-    text-align: left;
-}
+

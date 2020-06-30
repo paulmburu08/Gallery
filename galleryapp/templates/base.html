@@ -22,6 +22,7 @@
 </head>
 <body>
     <div class="container-fluid">
+        {% include 'navbar.html' %}
         <div class="jumbotron">
             <div class="header">
                 <h3 class="heading">WELCOME</h3>
@@ -30,7 +31,7 @@
             </div>
         </div>
     </div>
-    {% include 'navbar.html' %} <br>
+     <br>
     {% block content %} 
     
     {%endblock%}

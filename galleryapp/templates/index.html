@@ -11,8 +11,7 @@
         <img src="{{image.image.url}}" class="card-img-top img-responsive" alt="Image">
     </a>
       <div class="card-body">
-        <p id="url" style="visibility: hidden;">{{image}}.url</p>
-        <button class="{{image.id}}.url card-text" data-clipboard-target='#url'>Copy link</button>
+        <button class="copylink card-text" onclick="copyUrl('/image/{{image.id}}')">Copy link</button>
       </div>
     </div>
     {% endfor %}
