@@ -13,6 +13,10 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
+    @classmethod
+    def update_category(cls,id,location):
+        cls.objects.filter(id = id).update(location = location)
+
 class Category(models.Model):
     category =  models.CharField(max_length=30)
 
@@ -21,6 +25,10 @@ class Category(models.Model):
 
     def save_category(self):
         self.save()
+
+    @classmethod
+    def update_category(cls,id,category):
+        cls.objects.filter(id = id).update(category = category)
 
 class Image(models.Model):
     image = models.ImageField(upload_to='images/')
@@ -46,6 +54,10 @@ class Image(models.Model):
     def get_image_by_id(cls,id):
         images = cls.objects.get(id = id)
         return images
+
+    @classmethod
+    def update_category(cls,id,image):
+        cls.objects.filter(id = id).update(image = image)
 
     @classmethod
     def search_by_category(cls,search_term):

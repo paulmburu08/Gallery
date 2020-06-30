@@ -11,11 +11,13 @@
         <img src="{{image.image.url}}" class="card-img-top img-responsive" alt="Image">
     </a>
       <div class="card-body">
-        <h4 class="card-text">{{image.name}}</h4>
+        <p id="url" style="visibility: hidden;">{{image}}.url</p>
+        <button class="{{image.id}}.url card-text" data-clipboard-target='#url'>Copy link</button>
       </div>
     </div>
     {% endfor %}
   </div>
   {% endif %}
+
 
 {% endblock %}

@@ -4,3 +4,5 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
         alwaysShowClose: false,
     });
 });
+
+
