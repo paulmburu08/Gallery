@@ -24,23 +24,14 @@ def search_results(request):
         message = "You haven't searched for any term"
         return render(request, 'search.html',{"message":message})
 
-def image(request,id):
-
-    try:
-        images = Image.get_image_by_id(id)
-
-    except ObjectDoesNotExist:
-        raise Http404()
-
-    return render(request, 'image.html',{'images':images})
-
 def location(request,location):
 
     try:
         images = Image.filter_by_location(location)
+        location = f'{location}'
 
     except ObjectDoesNotExist:
         raise Http404()
 
-    return render(request, 'location.html',{'images':images})
+    return render(request, 'location.html',{'images':images,'location':location})
 

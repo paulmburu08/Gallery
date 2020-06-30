@@ -13,6 +13,9 @@
     {% endif %}
     {% block styles %}
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Yellowtail&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Open+Sans+Condensed:ital,wght@1,300&family=Playfair+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     {% endblock %}
 
@@ -21,18 +24,24 @@
     <div class="container-fluid">
         <div class="jumbotron">
             <div class="header">
-                <p>Some content</p>
+                <h3 class="heading">WELCOME</h3>
+                <hr>
+                <p>“Taking an image, freezing a moment, reveals how rich reality truly is.”</p>
             </div>
         </div>
     </div>
-    {% include 'navbar.html' %}
+    {% include 'navbar.html' %} <br>
     {% block content %} 
     
     {%endblock%}
 
     {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
      {% bootstrap_javascript %}
     {% endblock %}
 </body>
+<br>
+<br>
 </html>

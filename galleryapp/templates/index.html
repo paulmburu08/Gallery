@@ -7,9 +7,9 @@
   <div class="row">
     {% for image in images %}
     <div class="card col-md-4" style="width: 18rem;">
-      <a href="{% url 'image' image.id %}">
+      <a href="{{image.image.url}}" class="image" data-type="image" data-toggle="lightbox" data-title="{{image.name}} | {{image.location}} " data-footer="{{image.description}}">
         <img src="{{image.image.url}}" class="card-img-top img-responsive" alt="Image">
-      </a> 
+    </a>
       <div class="card-body">
         <h4 class="card-text">{{image.name}}</h4>
       </div>

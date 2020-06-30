@@ -4,19 +4,12 @@
 
   <div class="row">
     {% if images%}
-      <h2>Found {{ images|length }} of searched term {{message}}</h2> <br>
+      <h2 class="search">Found {{ images|length }} of searched term {{message}}</h2> <br><br>
     {% else %}
-      <h2> Found 0 articles for the search term {{message}}</h2>
+      <h2 class="search"> Found 0 images for the search term {{message}}</h2> <br><br>
     {% endif %}
 
-  </div>
-
-  <div class="row">
-
-    {%extends 'base.html'%} 
-    {% load static %}
-    
-    {% block content %}
+  </div> <br>
     
     {% if images %}
       <div class="row">
@@ -32,6 +25,5 @@
         {% endfor %}
       </div>
       {% endif %}
-  </div>
 </div>
 {% endblock %}
