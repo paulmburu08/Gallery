@@ -14,7 +14,7 @@ class Location(models.Model):
         self.delete()
 
     @classmethod
-    def update_category(cls,id,location):
+    def update_location(cls,id,location):
         cls.objects.filter(id = id).update(location = location)
 
 class Category(models.Model):
@@ -25,6 +25,9 @@ class Category(models.Model):
 
     def save_category(self):
         self.save()
+
+    def delete_category(self):
+        self.delete()
 
     @classmethod
     def update_category(cls,id,category):
@@ -56,7 +59,7 @@ class Image(models.Model):
         return images
 
     @classmethod
-    def update_category(cls,id,image):
+    def update_image(cls,id,image):
         cls.objects.filter(id = id).update(image = image)
 
     @classmethod
