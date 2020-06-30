@@ -10,9 +10,6 @@
       <a href="{{image.image.url}}" class="image" data-type="image" data-toggle="lightbox" data-title="{{image.name}} | {{image.location}} " data-footer="{{image.description}}">
         <img src="{{image.image.url}}" class="card-img-top img-responsive" alt="Image">
     </a>
-      <div class="card-body">
-        <button class="copylink card-text" onclick="copyUrl('/image/{{image.id}}')">Copy link</button>
-      </div>
     </div>
     {% endfor %}
   </div>
