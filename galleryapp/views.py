@@ -38,7 +38,6 @@ def location(request,location):
 
     try:
         images = Image.filter_by_location(location)
-        location = f'{location}'
 
     except ObjectDoesNotExist:
         raise Http404()
