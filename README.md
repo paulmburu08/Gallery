@@ -1,3 +1,4 @@
+[![codebeat badge](https://codebeat.co/badges/91e7961b-4f56-493f-b685-b2ee70c66114)](https://codebeat.co/projects/github-com-paulmburu08-gallery-master)
 # PHOTOSPACE
 A personal gallery application to display photos for others to see.
 
